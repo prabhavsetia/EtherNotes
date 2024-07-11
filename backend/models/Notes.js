@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const NotesSchema = new mongoose.Schema({
+    user:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'user'
+    },
     title: {
         type: String ,
         require: true
@@ -8,7 +12,6 @@ const NotesSchema = new mongoose.Schema({
     description:{
         type: String,
         require: true,
-        unique: true
     },
     tag:{
         type: String,
