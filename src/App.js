@@ -7,16 +7,19 @@ import {
   Routes as Switch,
   Route,
 } from "react-router-dom";
+import NoteState from './context/notes/NoteState';
 function App() {
   return (
     <>
-      <Router>
-        <Navbar />
-        <Switch>
+      <NoteState>
+        <Router>
+          <Navbar />
+          <Switch>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About />} />
           </Switch>
-      </Router>
+        </Router>
+      </NoteState>
     </>
   );
 }
