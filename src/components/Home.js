@@ -8,7 +8,7 @@ const Home = () => {
         <form className="my-3">
           <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">Title</label>
-            <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+            <input type="email" className="form-control" id="exampleFormControlInput1"  />
           </div>
           <div className="mb-3">
             <label htmlFor="exampleFormControlTextarea1" className="form-label">Description</label>
@@ -21,5 +21,6 @@ const Home = () => {
     </div>
   )
 }
+
 
 export default Home
