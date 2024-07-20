@@ -7,7 +7,6 @@ const NoteState = (props) => {
     const [notes, setNotes] = useState(tempNotes)
     //Get all notes
     const getNotes = async () => {
-        console.log("Getting Notes");
         //TODO : API Call
         const url = '/api/notes/fetchallnotes';
         const response = await fetch(`${host}${url}`, {
@@ -22,7 +21,6 @@ const NoteState = (props) => {
     }
     //Add a note
     const addNote = async (title, description, tag) => {
-        console.log("adding a new note");
         //TODO : API Call
         const url = '/api/notes/addnote';
         const response = await fetch(`${host}${url}`, {
@@ -33,6 +31,7 @@ const NoteState = (props) => {
             },
             body: JSON.stringify({ title, description, tag }),
         });
+        // eslint-disable-next-line
         const json = response.json();
         //
         const note = {
@@ -77,18 +76,19 @@ const NoteState = (props) => {
             },
             body: JSON.stringify({ title, description, tag }),
         });
-        const json = response.json();
+        // eslint-disable-next-line
+        const json = await response.json();
         // Logic to edit Client
-        console.log("Editing the note");
-        for (let index = 0; index < notes.length; index++) {
-            const element = notes[index];
+        const newNotes = JSON.parse(JSON.stringify(notes))
+        for (let index = 0; index < newNotes.length; index++) {
+            const element = newNotes[index];
             if (element._id === id) {
-                element.title = title;
-                element.description = description;
-                element.tag = tag;
+                newNotes[index].title = title;
+                newNotes[index].description = description;
+                newNotes[index].tag = tag;
+                break;
             }
         }
-        const newNotes = notes.filter((note) => { return note._id !== id })
         setNotes(newNotes);
     }
     return (
