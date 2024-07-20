@@ -29,7 +29,7 @@ const NoteState = (props) => {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
-                'auth-token': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY5MDBh N2NiM2ZjNTI1NjI1MWEwYTlkIn0sImlhdCI6MTcyMDcyNTM1M30.2aoeqkLQ4cL5sjU64F2hi-Iemu8irbTMSNzPd6Li6GI"
+                'auth-token': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY5MDBhN2NiM2ZjNTI1NjI1MWEwYTlkIn0sImlhdCI6MTcyMDcyNTM1M30.2aoeqkLQ4cL5sjU64F2hi-Iemu8irbTMSNzPd6Li6GI"
             },
             body: JSON.stringify({ title, description, tag }),
         });
@@ -40,8 +40,8 @@ const NoteState = (props) => {
             "user": "66900a7cb3fc5256251a0a9wd",
             "title": title,
             "description": description,
-            "tag": "gnrl",
-            "date": tag,
+            "tag": tag,
+            "date": "2024-07-15T05:00:18.273+00:00",
             "__v": 0
         };
         setNotes(notes.concat(note))
