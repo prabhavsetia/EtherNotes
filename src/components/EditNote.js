@@ -28,19 +28,19 @@ const EditNote = forwardRef((props, ref) => {
                             <form className="my-3">
                                 <div className="mb-3">
                                     <label htmlFor="editedtitle" className="form-label">Title</label>
-                                    <input type="text" className="form-control" id="editedtitle" name="editedtitle" value={note.editedtitle} onChange={onChange} />
+                                    <input type="text" className="form-control" id="editedtitle"  name="editedtitle" value={note.editedtitle} onChange={onChange} minLength={5} required />
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="editeddescription" className="form-label">Description</label>
-                                    <textarea className="form-control" id="editeddescription" name="editeddescription" rows="3" value={note.editeddescription} onChange={onChange}></textarea>
+                                    <textarea className="form-control" id="editeddescription"  name="editeddescription" rows="3" value={note.editeddescription} onChange={onChange}minLength={5} required></textarea>
                                 </div>
                                 <div className="mb-3">
                                     <label htmlFor="editedtag" className="form-label">Tag</label>
-                                    <input type="text" className="form-control" id="editedtag" name="editedtag" value={note.editedtag} onChange={onChange} />
+                                    <input type="text" className="form-control" id="editedtag"  name="editedtag" value={note.editedtag} onChange={onChange} />
                                 </div>
                                 <div className="modal-footer">
                                     <button ref={refClose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button refclosetype="button" className="btn btn-primary" onClick={handleClick}>Save changes</button>
+                                    <button disabled={note.editedtitle.length<5 || note.editeddescription.length<5} refclosetype="button" className="btn btn-primary" onClick={handleClick}>Save changes</button>
                                 </div>
                             </form >
                         </div>
