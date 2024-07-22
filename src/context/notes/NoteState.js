@@ -35,8 +35,8 @@ const NoteState = (props) => {
         const json = response.json();
         //
         const note = {
-            "_id": "6694c8f657ef10d8c081016cw",
-            "user": "66900a7cb3fc5256251a0a9wd",
+            "_id": "6694c8f656ef10d8c081016c",
+            "user": "66900a7c43fc5256251a0a9d",
             "title": title,
             "description": description,
             "tag": tag,
@@ -78,6 +78,7 @@ const NoteState = (props) => {
         });
         // eslint-disable-next-line
         const json = await response.json();
+        console.log(json);
         // Logic to edit Client
         const newNotes = JSON.parse(JSON.stringify(notes))
         for (let index = 0; index < newNotes.length; index++) {

@@ -7,8 +7,8 @@ const EditNote = forwardRef((props, ref) => {
     const refClose = useRef(null); // Added refClose here
     const handleClick = (e) => {
         e.preventDefault();
-        refClose.current.click();
         editNote(note.id, note.editedtitle, note.editeddescription, note.editedtag);
+        refClose.current.click();
 
     }
 
