@@ -9,6 +9,7 @@ const EditNote = forwardRef((props, ref) => {
         e.preventDefault();
         editNote(note.id, note.editedtitle, note.editeddescription, note.editedtag);
         refClose.current.click();
+        props.showAlert("Note Edited","success");
 
     }
 
