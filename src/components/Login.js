@@ -18,21 +18,21 @@ const Login = (props) => {
         const json = await response.json();
         console.log(json);
         console.log("logging in");
-        if(json.success){
+        if (json.success) {
             //save the token and redirect
-             localStorage.setItem('token',json.authtoken);
-             navigate("/");
-             props.showAlert("Logged in successfully","success");
+            localStorage.setItem('token', json.authtoken);
+            navigate("/");
+            props.showAlert("Logged in successfully", "success");
         }
-        else{
-            props.showAlert("Invalid credentials","danger");
+        else {
+            props.showAlert("Invalid credentials", "danger");
         }
     }
     const onChange = (e) => {
         setCredentials({ ...credentials, [e.target.name]: e.target.value })
     }
     return (
-        <div className=' container'>
+        <div className='container my-4'>
             <form onSubmit={handleSubmitted}>
                 <div className=" mb-3">
                     <label htmlFor="email" className="form-label">Email address</label>
