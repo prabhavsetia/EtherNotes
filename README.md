@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# EtherNotes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EtherNotes is a web application designed to demonstrate the functionality of APIs for user authentication and note management. This app focuses on backend development, showcasing how APIs can be created and utilized for various operations related to user notes.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication**: APIs for user login and signup.
+- **Note Management**: Once logged in, users can:
+  - Fetch their notes.
+  - Add new notes.
+  - Edit existing notes.
+  - Delete notes.
 
-### `npm start`
+## Purpose
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This application serves as a practical example of how to implement and interact with APIs. The primary goal is to provide an understanding of API operations and backend functionality. Please note that the user interface (UI) is minimal and not the primary focus of this project. The emphasis is on demonstrating API interactions rather than creating a polished UI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. **Clone the Repository**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/yourusername/EtherNotes.git
+2. **Navigate to the Project Directory**
 
-### `npm run build`
+   ```bash
+   cd EtherNotes
+3. **Install Dependencies**
+    Ensure you have the required dependencies installed. You may need to adjust the following command based on your package manager.
+   ```bash
+   npm init
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Start the Application**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+- **Signup**: Register a new user account.
+- **Login**: Authenticate and receive a token.
+- **Fetch Notes**: Retrieve all notes for the logged-in user.
+- **Add Note**: Create a new note.
+- **Edit Note**: Modify an existing note.
+- **Delete Note**: Remove a note.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributing
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feel free to contribute to the project by submitting issues or pull requests.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Learn More
+## 📫 Contact
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For any inquiries or feedback, feel free to reach out on [LinkedIn](https://www.linkedin.com/in/prabhavsetia/).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
